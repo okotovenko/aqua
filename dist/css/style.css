@@ -347,14 +347,14 @@ body::after {
   column-gap: 1.25rem;
   width: 100%;
   height: 100%;
-  max-width: 102.5rem
+  max-width: 102.5rem;
+  padding: 0 1.25rem
 }
 .header__logo {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 100%;
-  padding-left: .625rem
+  height: 100%
 }
 .header__logo>img,
 .header__logo>picture {
@@ -551,7 +551,7 @@ body::after {
   display: flex;
   justify-content: center;
   gap: 1.25rem;
-  margin-bottom: 1.25rem
+  margin-bottom: 1.875rem
 }
 .footer__links a {
   display: flex;
@@ -679,7 +679,7 @@ body::after {
   -o-object-fit: contain;
   object-fit: contain;
   aspect-ratio: 840/540;
-  max-width: 28.125rem
+  max-width: 46.875rem
 }
 .masks__content picture img,
 .masks__content picture source {
@@ -688,8 +688,7 @@ body::after {
   -o-object-fit: contain;
   object-fit: contain;
   aspect-ratio: 840/540;
-  max-width: 67.5rem;
-  max-height: 31.25rem
+  max-width: 46.875rem
 }
 .masks__content p {
   font-weight: 500;
@@ -986,7 +985,7 @@ body::after {
 }
 .explorer__text {
   width: 100%;
-  max-width: 46.25rem;
+  max-width: 52.5rem;
   font-weight: 400;
   line-height: 150%;
   text-align: center;
@@ -1084,7 +1083,7 @@ body::after {
 .choose__items {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit,minmax(280px,280px));
+  grid-template-columns: repeat(auto-fit,minmax(320px,320px));
   margin-bottom: 3.125rem;
   row-gap: 2.5rem
 }
@@ -1150,8 +1149,8 @@ body::after {
   align-items: center;
   position: relative;
   z-index: 2;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   padding-top: 5.9375rem;
   background-color: #fff
 }
@@ -2108,7 +2107,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width:79.375em) {
   .header__logo {
-    max-width: 8.8125rem
+    max-width: 8.1875rem
   }
   .header__logo {
     max-height: 2.25rem
@@ -2249,7 +2248,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 4.8125rem
   }
   .explorer__text {
-    font-size: 1.25rem
+    font-size: 1.375rem
   }
   .explorer__text {
     margin-bottom: 2.375rem
@@ -2433,7 +2432,7 @@ button.swiper-pagination-bullet {
 }
 @media (max-width:20em) {
   .header__logo {
-    max-width: 5.9375rem
+    max-width: 5.3125rem
   }
   .header__logo {
     max-height: 1.4375rem
@@ -2898,6 +2897,9 @@ button.swiper-pagination-bullet {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
   }
+  .header__content {
+    padding: 0
+  }
   .footer__decor>img:nth-child(1),
   .footer__decor>picture:nth-child(1) {
     display: none
@@ -3014,7 +3016,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width:20em)and (max-width:79.375em) {
   .header__logo {
-    max-width: clamp(5.9375rem ,4.9690789474rem + 4.8421052632vw ,8.8125rem)
+    max-width: clamp(5.3125rem ,4.3440789474rem + 4.8421052632vw ,8.1875rem)
   }
   .header__logo {
     max-height: clamp(1.4375rem ,1.1638157895rem + 1.3684210526vw ,2.25rem)
@@ -3155,7 +3157,7 @@ button.swiper-pagination-bullet {
     margin-bottom: clamp(1.25rem ,.05rem + 6vw ,4.8125rem)
   }
   .explorer__text {
-    font-size: clamp(1rem ,.9157894737rem + .4210526316vw ,1.25rem)
+    font-size: clamp(1rem ,.8736842105rem + .6315789474vw ,1.375rem)
   }
   .explorer__text {
     margin-bottom: clamp(1.8125rem ,1.6230263158rem + .9473684211vw ,2.375rem)
