@@ -590,13 +590,7 @@ body::after {
 }
 .footer__logos a {
   display: flex;
-  width: 12.875rem;
   height: 100%
-}
-.footer__logos a>img,
-.footer__logos a>picture {
-  width: 12.875rem;
-  height: 4rem
 }
 .footer__logos a picture img,
 .footer__logos a picture source {
@@ -2149,6 +2143,17 @@ button.swiper-pagination-bullet {
   .footer__left {
     font-size: 1rem
   }
+  .footer__logos a {
+    width: 12.875rem
+  }
+  .footer__logos a>img,
+  .footer__logos a>picture {
+    width: 12.875rem
+  }
+  .footer__logos a>img,
+  .footer__logos a>picture {
+    height: 4rem
+  }
   .footer__right {
     gap: 3.125rem
   }
@@ -2462,6 +2467,17 @@ button.swiper-pagination-bullet {
   }
   .footer__left {
     font-size: .75rem
+  }
+  .footer__logos a {
+    width: 9.75rem
+  }
+  .footer__logos a>img,
+  .footer__logos a>picture {
+    width: 9.75rem
+  }
+  .footer__logos a>img,
+  .footer__logos a>picture {
+    height: 3rem
   }
   .footer__right {
     gap: 1.25rem
@@ -3032,6 +3048,17 @@ button.swiper-pagination-bullet {
   }
   .footer__left {
     font-size: clamp(.75rem ,.6657894737rem + .4210526316vw ,1rem)
+  }
+  .footer__logos a {
+    width: clamp(9.75rem ,8.6973684211rem + 5.2631578947vw ,12.875rem)
+  }
+  .footer__logos a>img,
+  .footer__logos a>picture {
+    width: clamp(9.75rem ,8.6973684211rem + 5.2631578947vw ,12.875rem)
+  }
+  .footer__logos a>img,
+  .footer__logos a>picture {
+    height: clamp(3rem ,2.6631578947rem + 1.6842105263vw ,4rem)
   }
   .footer__right {
     gap: clamp(1.25rem ,.6184210526rem + 3.1578947368vw ,3.125rem)
