@@ -640,7 +640,8 @@ body::after {
   line-height: 137%;
   letter-spacing: -.04em;
   text-align: center;
-  color: #1e1e1e
+  color: #1e1e1e;
+  margin-bottom: 2.5rem
 }
 .masks__container h2 {
   width: 100%;
@@ -2873,6 +2874,9 @@ button.swiper-pagination-bullet {
     bottom: calc(50% - .0625rem);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
+  }
+  .menu__body::before {
+    height: 100%
   }
   .footer__decor>img:nth-child(1),
   .footer__decor>picture:nth-child(1) {
