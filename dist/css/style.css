@@ -347,8 +347,7 @@ body::after {
   column-gap: 1.25rem;
   width: 100%;
   height: 100%;
-  max-width: 102.5rem;
-  padding: 0 1.25rem
+  max-width: 102.5rem
 }
 .header__logo {
   position: relative;
@@ -551,7 +550,7 @@ body::after {
   display: flex;
   justify-content: center;
   gap: 1.25rem;
-  margin-bottom: 1.875rem
+  margin-bottom: 2.8125rem
 }
 .footer__links a {
   display: flex;
@@ -695,6 +694,10 @@ body::after {
   line-height: 130%;
   text-align: center;
   color: #67818f
+}
+.masks__scale {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2)
 }
 .masks .masks-button-prev {
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -2729,6 +2732,11 @@ button.swiper-pagination-bullet {
     margin-top: -3.75rem
   }
 }
+@media (max-width:84.375em) {
+  .header__content {
+    padding: 0 2.5rem
+  }
+}
 @media (max-width:81.25em) {
   .masks .masks-button-prev {
     left: .9375rem
@@ -2744,6 +2752,9 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:61.99875em) {
+  .header__content {
+    padding: 0
+  }
   .icon-menu {
     display: block;
     position: relative;
@@ -2896,9 +2907,6 @@ button.swiper-pagination-bullet {
     bottom: calc(50% - .0625rem);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
-  }
-  .header__content {
-    padding: 0
   }
   .footer__decor>img:nth-child(1),
   .footer__decor>picture:nth-child(1) {
