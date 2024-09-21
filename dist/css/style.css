@@ -178,7 +178,7 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 0;
+  padding: 10px;
   transition: visibility .8s ease 0s;
   visibility: hidden;
   pointer-events: none
