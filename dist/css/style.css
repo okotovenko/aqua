@@ -178,7 +178,7 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 10px 10px;
+  padding: 0;
   transition: visibility .8s ease 0s;
   visibility: hidden;
   pointer-events: none
@@ -211,7 +211,7 @@ body::after {
   transition: transform .3s ease 0s;
   transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
   background-color: #eee;
-  padding: 10px;
+  padding: 0;
   width: 100%;
   max-width: 900px;
   border-radius: 20px;
@@ -223,7 +223,10 @@ body::after {
   visibility: visible
 }
 .popup__close {
-  align-self: flex-end
+  position: absolute;
+  right: .3125rem;
+  top: .3125rem;
+  z-index: 5
 }
 .popup__text {
   padding: 56.25% 0 0 0;
@@ -327,7 +330,8 @@ body::after {
   width: 100%;
   background-color: #fff;
   z-index: 5;
-  overflow: hidden
+  overflow: hidden;
+  height: 5rem
 }
 .header__container {
   height: 100%;
@@ -349,7 +353,8 @@ body::after {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 100%
+  height: 100%;
+  padding-left: .625rem
 }
 .header__logo>img,
 .header__logo>picture {
@@ -476,7 +481,7 @@ body::after {
 }
 .footer__fish--01 {
   position: absolute;
-  top: 1.25rem;
+  top: 2.5rem;
   left: -1.875rem;
   width: 11rem;
   height: 7.625rem;
@@ -484,40 +489,40 @@ body::after {
 }
 .footer__fish--02 {
   position: absolute;
-  top: 60%;
-  left: 10%;
+  top: 48%;
+  left: 3%;
   width: 14.125rem;
   height: 10.25rem;
   pointer-events: none
 }
 .footer__fish--03 {
   position: absolute;
-  right: -2%;
-  top: 30%;
+  right: -3%;
+  top: 25%;
   width: 9.25rem;
   height: 6.625rem;
   pointer-events: none
 }
 .footer__fish--04 {
   position: absolute;
-  right: 25%;
-  top: 50%;
+  right: 26%;
+  top: 35%;
   width: 11.8125rem;
   height: 9rem;
   pointer-events: none
 }
 .footer__fish--05 {
   position: absolute;
-  left: 30%;
-  top: 35%;
+  left: 29%;
+  top: 28%;
   width: 5.9375rem;
   height: 4.0625rem;
   pointer-events: none
 }
 .footer__fish--06 {
   position: absolute;
-  right: 5%;
-  bottom: 20%;
+  right: 6%;
+  bottom: 19%;
   width: 4.375rem;
   height: 3.8125rem;
   z-index: 4;
@@ -545,7 +550,8 @@ body::after {
 .footer__links {
   display: flex;
   justify-content: center;
-  gap: 1.25rem
+  gap: 1.25rem;
+  margin-bottom: 1.25rem
 }
 .footer__links a {
   display: flex;
@@ -579,15 +585,23 @@ body::after {
 .footer__logos {
   display: flex;
   align-items: center;
-  gap: .75rem
+  justify-content: center;
+  width: 100%
 }
-.footer__logos img:nth-child(1) {
-  width: 2.9375rem;
-  height: 3rem
+.footer__logos a {
+  display: flex;
+  width: 12.875rem;
+  height: 100%
 }
-.footer__logos img:nth-child(2) {
-  width: 6.4375rem;
-  height: 2rem
+.footer__logos a>img,
+.footer__logos a>picture {
+  width: 12.875rem;
+  height: 4rem
+}
+.footer__logos a picture img,
+.footer__logos a picture source {
+  width: 12.875rem;
+  height: 4rem
 }
 .footer__right {
   display: flex
@@ -604,13 +618,14 @@ body::after {
   width: 100%;
   height: 100%;
   max-height: 100%;
-  position: relative
+  position: relative;
+  margin-top: 5rem
 }
 .video h1 {
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 3.75rem;
+  bottom: 6.25rem;
   display: block;
   width: 100%;
   max-width: 77.5rem;
@@ -670,8 +685,7 @@ body::after {
   -o-object-fit: contain;
   object-fit: contain;
   aspect-ratio: 840/540;
-  max-width: 67.5rem;
-  max-height: 31.25rem
+  max-width: 28.125rem
 }
 .masks__content picture img,
 .masks__content picture source {
@@ -690,12 +704,14 @@ body::after {
   color: #67818f
 }
 .masks .masks-button-prev {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
   left: -1.5rem
 }
 .masks .masks-button-next {
-  right: -1.5rem
+  right: -1.5rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
 }
 .masks .masks-button-next,
 .masks .masks-button-prev {
@@ -956,7 +972,9 @@ body::after {
   object-fit: cover
 }
 .explorer__diver {
-  aspect-ratio: 764/434
+  aspect-ratio: 764/434;
+  -webkit-transform-origin: center center;
+  transform-origin: center center
 }
 .explorer__diver>img,
 .explorer__diver>picture {
@@ -978,7 +996,9 @@ body::after {
   font-weight: 400;
   line-height: 150%;
   text-align: center;
-  color: #fff
+  color: #fff;
+  position: relative;
+  z-index: 1
 }
 .explorer__items {
   width: 100%;
@@ -2093,11 +2113,8 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width:79.375em) {
-  .header {
-    height: 6.25rem
-  }
   .header__logo {
-    max-width: 8.1875rem
+    max-width: 8.8125rem
   }
   .header__logo {
     max-height: 2.25rem
@@ -2138,9 +2155,6 @@ button.swiper-pagination-bullet {
   .footer__right a {
     font-size: 1rem
   }
-  .video {
-    margin-top: 6.25rem
-  }
   .masks__container {
     padding-top: 4.375rem
   }
@@ -2151,15 +2165,15 @@ button.swiper-pagination-bullet {
     font-size: 1.25rem
   }
   .masks__container h2 {
-    margin-bottom: 6.25rem
+    margin-bottom: 3.75rem
   }
   .masks__content>img,
   .masks__content>picture {
-    margin-bottom: 4.375rem
+    margin-bottom: 3.125rem
   }
   .masks__content picture img,
   .masks__content picture source {
-    margin-bottom: 4.375rem
+    margin-bottom: 3.125rem
   }
   .masks__content p {
     font-size: 1.25rem
@@ -2188,7 +2202,7 @@ button.swiper-pagination-bullet {
     font-size: 2rem
   }
   .how__row p {
-    font-size: 1.0625rem
+    font-size: 1.25rem
   }
   .how__img>div {
     width: 4.375rem
@@ -2245,7 +2259,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 2.75rem
   }
   .explorer__item p {
-    font-size: 1.0625rem
+    font-size: 1.25rem
   }
   .explorer__img {
     margin-bottom: 2.75rem
@@ -2350,7 +2364,7 @@ button.swiper-pagination-bullet {
     font-size: 2rem
   }
   .choose__item p {
-    font-size: 1.0625rem
+    font-size: 1.25rem
   }
   .testimonials {
     padding-top: 3.75rem
@@ -2413,11 +2427,8 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:20em) {
-  .header {
-    height: 5.625rem
-  }
   .header__logo {
-    max-width: 5.3125rem
+    max-width: 5.9375rem
   }
   .header__logo {
     max-height: 1.4375rem
@@ -2457,9 +2468,6 @@ button.swiper-pagination-bullet {
   }
   .footer__right a {
     font-size: .75rem
-  }
-  .video {
-    margin-top: 5.625rem
   }
   .masks__container {
     padding-top: 2.5rem
@@ -2508,7 +2516,7 @@ button.swiper-pagination-bullet {
     font-size: 1rem
   }
   .how__row p {
-    font-size: .75rem
+    font-size: 1rem
   }
   .how__img>div {
     width: 2.5rem
@@ -2550,7 +2558,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 1.25rem
   }
   .explorer__text {
-    font-size: .75rem
+    font-size: 1rem
   }
   .explorer__text {
     margin-bottom: 1.8125rem
@@ -2565,7 +2573,7 @@ button.swiper-pagination-bullet {
     margin-bottom: .9375rem
   }
   .explorer__item p {
-    font-size: .875rem
+    font-size: 1rem
   }
   .explorer__img {
     margin-bottom: 1.25rem
@@ -2670,7 +2678,7 @@ button.swiper-pagination-bullet {
     font-size: 1.25rem
   }
   .choose__item p {
-    font-size: .875rem
+    font-size: 1rem
   }
   .testimonials {
     padding-top: 2rem
@@ -2816,14 +2824,13 @@ button.swiper-pagination-bullet {
     left: -100%;
     top: 0;
     overflow: auto;
-    padding: 3.125rem .9375rem .9375rem 1.875rem;
     transition: left .3s
   }
   .menu__body::before {
     content: "";
     position: fixed;
     width: 100%;
-    height: 4.375rem;
+    height: 100%;
     left: -100%;
     top: 0;
     transition: left .3s;
@@ -2874,9 +2881,6 @@ button.swiper-pagination-bullet {
     bottom: calc(50% - .0625rem);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
-  }
-  .menu__body::before {
-    height: 100%
   }
   .footer__decor>img:nth-child(1),
   .footer__decor>picture:nth-child(1) {
@@ -2930,6 +2934,14 @@ button.swiper-pagination-bullet {
   .masks__container h1 {
     display: block
   }
+  .masks .masks-button-prev {
+    -webkit-transform: translateY(0) rotate(180deg);
+    transform: translateY(0) rotate(180deg)
+  }
+  .masks .masks-button-next {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
   .masks .masks-button-next,
   .masks .masks-button-prev {
     top: calc(100% - 24px)
@@ -2972,12 +2984,21 @@ button.swiper-pagination-bullet {
     bottom: 1.25rem
   }
 }
-@media (min-width:20em)and (max-width:79.375em) {
-  .header {
-    height: clamp(5.625rem ,5.4144736842rem + 1.0526315789vw ,6.25rem)
+@media (min-width:48em)and (max-width:120em) {
+  .header__content {
+    -webkit-column-gap: clamp(1.25rem ,-5.8333333333rem + 14.7569444444vw ,11.875rem);
+    -moz-column-gap: clamp(1.25rem ,-5.8333333333rem + 14.7569444444vw ,11.875rem);
+    column-gap: clamp(1.25rem ,-5.8333333333rem + 14.7569444444vw ,11.875rem)
   }
+  .menu__list {
+    -webkit-column-gap: clamp(1.875rem ,.7916666667rem + 2.2569444444vw ,3.5rem);
+    -moz-column-gap: clamp(1.875rem ,.7916666667rem + 2.2569444444vw ,3.5rem);
+    column-gap: clamp(1.875rem ,.7916666667rem + 2.2569444444vw ,3.5rem)
+  }
+}
+@media (min-width:20em)and (max-width:79.375em) {
   .header__logo {
-    max-width: clamp(5.3125rem ,4.3440789474rem + 4.8421052632vw ,8.1875rem)
+    max-width: clamp(5.9375rem ,4.9690789474rem + 4.8421052632vw ,8.8125rem)
   }
   .header__logo {
     max-height: clamp(1.4375rem ,1.1638157895rem + 1.3684210526vw ,2.25rem)
@@ -3018,9 +3039,6 @@ button.swiper-pagination-bullet {
   .footer__right a {
     font-size: clamp(.75rem ,.6657894737rem + .4210526316vw ,1rem)
   }
-  .video {
-    margin-top: clamp(5.625rem ,5.4144736842rem + 1.0526315789vw ,6.25rem)
-  }
   .masks__container {
     padding-top: clamp(2.5rem ,1.8684210526rem + 3.1578947368vw ,4.375rem)
   }
@@ -3031,15 +3049,15 @@ button.swiper-pagination-bullet {
     font-size: clamp(.9375rem ,.8322368421rem + .5263157895vw ,1.25rem)
   }
   .masks__container h2 {
-    margin-bottom: clamp(.625rem ,-1.2697368421rem + 9.4736842105vw ,6.25rem)
+    margin-bottom: clamp(.625rem ,-.4276315789rem + 5.2631578947vw ,3.75rem)
   }
   .masks__content>img,
   .masks__content>picture {
-    margin-bottom: clamp(1.875rem ,1.0328947368rem + 4.2105263158vw ,4.375rem)
+    margin-bottom: clamp(1.875rem ,1.4539473684rem + 2.1052631579vw ,3.125rem)
   }
   .masks__content picture img,
   .masks__content picture source {
-    margin-bottom: clamp(1.875rem ,1.0328947368rem + 4.2105263158vw ,4.375rem)
+    margin-bottom: clamp(1.875rem ,1.4539473684rem + 2.1052631579vw ,3.125rem)
   }
   .masks__content p {
     font-size: clamp(.75rem ,.5815789474rem + .8421052632vw ,1.25rem)
@@ -3068,7 +3086,7 @@ button.swiper-pagination-bullet {
     font-size: clamp(1rem ,.6631578947rem + 1.6842105263vw ,2rem)
   }
   .how__row p {
-    font-size: clamp(.75rem ,.6447368421rem + .5263157895vw ,1.0625rem)
+    font-size: clamp(1rem ,.9157894737rem + .4210526316vw ,1.25rem)
   }
   .how__img>div {
     width: clamp(2.5rem ,1.8684210526rem + 3.1578947368vw ,4.375rem)
@@ -3110,7 +3128,7 @@ button.swiper-pagination-bullet {
     margin-bottom: clamp(1.25rem ,.05rem + 6vw ,4.8125rem)
   }
   .explorer__text {
-    font-size: clamp(.75rem ,.5815789474rem + .8421052632vw ,1.25rem)
+    font-size: clamp(1rem ,.9157894737rem + .4210526316vw ,1.25rem)
   }
   .explorer__text {
     margin-bottom: clamp(1.8125rem ,1.6230263158rem + .9473684211vw ,2.375rem)
@@ -3125,7 +3143,7 @@ button.swiper-pagination-bullet {
     margin-bottom: clamp(.9375rem ,.3269736842rem + 3.0526315789vw ,2.75rem)
   }
   .explorer__item p {
-    font-size: clamp(.875rem ,.8118421053rem + .3157894737vw ,1.0625rem)
+    font-size: clamp(1rem ,.9157894737rem + .4210526316vw ,1.25rem)
   }
   .explorer__img {
     margin-bottom: clamp(1.25rem ,.7447368421rem + 2.5263157895vw ,2.75rem)
@@ -3230,7 +3248,7 @@ button.swiper-pagination-bullet {
     font-size: clamp(1.25rem ,.9973684211rem + 1.2631578947vw ,2rem)
   }
   .choose__item p {
-    font-size: clamp(.875rem ,.8118421053rem + .3157894737vw ,1.0625rem)
+    font-size: clamp(1rem ,.9157894737rem + .4210526316vw ,1.25rem)
   }
   .testimonials {
     padding-top: clamp(2rem ,1.4105263158rem + 2.9473684211vw ,3.75rem)
@@ -3264,18 +3282,6 @@ button.swiper-pagination-bullet {
   }
   .testimonials__foto {
     margin-top: clamp(-4.375rem ,-3.5394736842rem + -1.0526315789vw ,-3.75rem)
-  }
-}
-@media (min-width:48em)and (max-width:120em) {
-  .header__content {
-    -webkit-column-gap: clamp(1.25rem ,-5.8333333333rem + 14.7569444444vw ,11.875rem);
-    -moz-column-gap: clamp(1.25rem ,-5.8333333333rem + 14.7569444444vw ,11.875rem);
-    column-gap: clamp(1.25rem ,-5.8333333333rem + 14.7569444444vw ,11.875rem)
-  }
-  .menu__list {
-    -webkit-column-gap: clamp(1.875rem ,.7916666667rem + 2.2569444444vw ,3.5rem);
-    -moz-column-gap: clamp(1.875rem ,.7916666667rem + 2.2569444444vw ,3.5rem);
-    column-gap: clamp(1.875rem ,.7916666667rem + 2.2569444444vw ,3.5rem)
   }
 }
 @media (min-width:48em)and (max-width:90em) {

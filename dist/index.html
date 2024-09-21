@@ -6,15 +6,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240921071727">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240921170611">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="ТУТ ВКАЗУЄМО КЛЮЧОВІ СЛОВА ДЛЯ ПОШУКОВИХ СИСТЕМ">
 	<meta name="description" content="ТУТ КОРОТКИЙ ОПИС-ПРИЗНАЧЕННЯ СТОРІНКИ">
-	<meta name="author" content="АВТОР">
-	<meta property="og:site_name" content="AquaVr" />
+	<meta name="author" content="AquaVR">
+	<meta property="og:site_name" content="AquaVR" />
 	<meta property="og:description" content="description">
-	<meta property="og:title" content="AquaVr" />
+	<meta property="og:title" content="AquaVR" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://aquavr.cimg/og.webp" />
 	<meta property="og:url" content="https://aquavr.com/">
@@ -37,12 +37,15 @@
 					<div class='header__menu menu'>
 						<nav class='menu__body'>
 							<ul class='menu__list'>
-								<li class='menu__item'><a data-goto="#masks" href='#' class='menu__link'>Snorkel VR
+								<li class='menu__item'><a data-goto-header data-goto="#masks" href='#' class='menu__link'>Snorkel VR
 										Mask</a></li>
-								<li class='menu__item'><a data-goto="#how" href='#' class='menu__link'>How it Works</a></li>
-								<li class='menu__item'><a data-goto="#explorer" href='#' class='menu__link'>Atlantis Explorer</a></li>
-								<li class='menu__item'><a data-goto="#choose" href='#' class='menu__link'>Choose AquaVR</a></li>
-								<li class='menu__item'><a data-goto="#testimonials" href='#' class='menu__link'>Testimonials</a></li>
+								<li class='menu__item'><a data-goto-header data-goto="#how" href='#' class='menu__link'>How it
+										Works</a></li>
+								<li class='menu__item'><a data-goto-header data-goto="#explorer" href='#' class='menu__link'>Atlantis
+										Explorer</a></li>
+								<li class='menu__item'><a data-goto-header data-goto="#choose" href='#' class='menu__link'>Choose
+										AquaVR</a></li>
+								<li class='menu__item'><a data-goto-header data-goto="#testimonials" href='#' class='menu__link'>Testimonials</a></li>
 							</ul>
 						</nav>
 						<button type='button' class='menu__icon icon-menu' name="burger button"> <span></span></button>
@@ -57,15 +60,14 @@
 					</iframe>
 					<h1>AquaVR turns any Pool <br> into VR Arena</h1>
 				</div>
-				<!-- <script src="https://player.vimeo.com/api/player.js?_v=20240921071727"></script> -->
+				<!-- <script src="https://player.vimeo.com/api/player.js?_v=20240921170611"></script> -->
 			</section>
-			<section class="page__masks masks">
-				<div id="masks" data-watch="navigator" data-watch-threshold="0.3" class="masks__container">
+			<section id="masks" data-watch="navigator" data-watch-threshold="0.3" class="page__masks masks">
+				<div class="masks__container">
 					<h1>AquaVR turns any Pool <br> into VR Arena</h1>
-					<h2>AquaVR is a double-tube full-face snorkel mask with a built-in waterproof
-						compartment for the Meta
-						Quest 3 VR headset made specifically for underwater activities, giving users vision, tactile
-						sensations and sound transmission experience</h2>
+					<h2>AquaVR is a double-tube full-face snorkel mask with a built-in waterproof compartment for the Meta
+						Quest 3 VR headset made specifically for underwater activities and adventure, gives users a unique
+						experience, tactile sensations and audio transmission underwater</h2>
 					<div class="masks__box">
 						<div class="masks__slider swiper">
 							<div class="masks__wrapper swiper-wrapper">
@@ -114,9 +116,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__how how">
+			<section id="how" data-watch="navigator" data-watch-threshold="0.3" class="page__how how">
 				<img class="how__0" src="img/explorer/wave.svg" alt="wave">
-				<div id="how" data-watch="navigator" data-watch-threshold="0.3" class="how__container">
+				<div class="how__container">
 					<h2>How it works</h2>
 					<div class="how__box">
 						<div class="how__row">
@@ -154,22 +156,22 @@
 					<a class="btn" href="https://atlantisexplorer.com/" target="_blank">Try It Now</a>
 				</div>
 			</section>
-			<section class="page__explorer explorer">
+			<section id="explorer" data-watch="navigator" data-watch-threshold="0.1" class="page__explorer explorer">
 				<img class="explorer__1" src="img/explorer/top.webp" alt="decor">
 				<img class="explorer__2" src="img/explorer/down.webp" alt="decor">
-				<div id="explorer" data-watch="navigator" data-watch-threshold="0.3" class="explorer__container">
+				<div class="explorer__container">
 					<div class="explorer__images">
 						<div class="explorer__logo">
 							<img class="explorer__3" src="img/explorer/explorer.webp" alt="logo">
 						</div>
-						<div class="explorer__diver">
+						<div data-watch data-watch-threshold="0.1" class="explorer__diver">
 							<img class="explorer__4" src="img/explorer/scuba.webp" alt="diver">
 						</div>
 					</div>
 					<div class="explorer__text">
-						<p>Exclusively designed for AquaVR and Meta Quest 3, "Atlantis Explorer" takes you on an epic
-							underwater quests. Explore ancient cities, navigate through sunken planes and ships from different
-							centuries, and discover treasure chests from shipwrecks</p>
+						<p>Exclusively designed for AquaVR and Meta Quest 3, "Atlantis Explorer" takes you on epic underwater
+							quests. Explore ancient cities, navigate through sunken planes and ships from different centuries,
+							and discover treasure chests from shipwrecks</p>
 					</div>
 					<h3>Single or team play for up to 10 players</h3>
 					<div class="explorer__items">
@@ -203,8 +205,8 @@
 					<a class="btn" href="https://atlantisexplorer.com/" target="_blank">Play Now</a>
 				</div>
 			</section>
-			<section class="page__choose choose">
-				<div id="choose" data-watch="navigator" data-watch-threshold="0.3" class="choose__container">
+			<section id="choose" data-watch="navigator" data-watch-threshold="0.3" class="page__choose choose">
+				<div class="choose__container">
 					<h2>Why Choose AquaVR?</h2>
 					<div class="choose__items">
 						<div class="choose__item">
@@ -228,9 +230,9 @@
 					<a class="btn" href="https://atlantisexplorer.com/" target="_blank">Try It Now</a>
 				</div>
 			</section>
-			<section class="page__testimonials testimonials">
+			<section id="testimonials" data-watch="navigator" data-watch-threshold="0.3" class="page__testimonials testimonials">
 				<img class="testimonials__0" src="img/explorer/wave.svg" alt="wave">
-				<div id="testimonials" data-watch="navigator" data-watch-threshold="0.3" class="testimonials__container">
+				<div class="testimonials__container">
 					<h2>Testimonials</h2>
 					<div class="testimonials__box">
 						<div class="testimonials__slider swiper">
@@ -241,8 +243,8 @@
 									</div>
 									<div class="testimonials__content">
 										<h5>Sarah M.</h5>
-										<blockquote>“AquaVR has changed the way
-											I explore the ocean. The VR experience is truly mesmerizing!"</blockquote>
+										<blockquote>AquaVR has changed the way
+											I explore the ocean. The VR experience is truly mesmerizing!</blockquote>
 									</div>
 								</div>
 								<div class="testimonials__slide swiper-slide">
@@ -251,8 +253,8 @@
 									</div>
 									<div class="testimonials__content">
 										<h5>James T.</h5>
-										<blockquote>“"The best snorkeling adventure I've ever had.
-											Highly recommend AquaVR!""</blockquote>
+										<blockquote>The best snorkeling adventure I've ever had.
+											Highly recommend AquaVR!</blockquote>
 									</div>
 								</div>
 								<div class="testimonials__slide swiper-slide">
@@ -261,8 +263,8 @@
 									</div>
 									<div class="testimonials__content">
 										<h5>Lisa R.</h5>
-										<blockquote>“"Atlantis Explorer is an incredible game. It's like living in an underwater
-											world!""</blockquote>
+										<blockquote>Atlantis Explorer is an incredible game. It's like living in an underwater
+											world!</blockquote>
 									</div>
 								</div>
 								<div class="testimonials__slide swiper-slide">
@@ -271,8 +273,8 @@
 									</div>
 									<div class="testimonials__content">
 										<h5>Jason Reed</h5>
-										<blockquote>“"AquaVR makes exploring Atlantis feel real — it's an adventure you can
-											practically touch!""</blockquote>
+										<blockquote>AquaVR makes exploring Atlantis feel real — it's an adventure you can
+											practically touch!</blockquote>
 									</div>
 								</div>
 								<div class="testimonials__slide swiper-slide">
@@ -281,8 +283,8 @@
 									</div>
 									<div class="testimonials__content">
 										<h5>Sophia Park</h5>
-										<blockquote>“"So relaxing and vivid. I feel like I'm swimming through a real underwater
-											world!""</blockquote>
+										<blockquote>So relaxing and vivid. I feel like I'm swimming through a real underwater
+											world!</blockquote>
 									</div>
 								</div>
 								<div class="testimonials__slide swiper-slide">
@@ -291,7 +293,7 @@
 									</div>
 									<div class="testimonials__content">
 										<h5>Marcus Williams</h5>
-										<blockquote>“"Closest thing to real diving I've found. The immersion is incredible!""
+										<blockquote>Closest thing to real diving I've found. The immersion is incredible!
 										</blockquote>
 									</div>
 								</div>
@@ -328,14 +330,15 @@
 						<a href="#" class="_icon-facebook" target="_blank"></a>
 						<a href="#" class="_icon-pinterest" target="_blank"></a>
 					</div>
+					<div class="footer__logos">
+						<a href="https://www.iaapa.org" target="_blank">
+							<img src="img/footer/logo21.webp" alt="logo">
+						</a>
+					</div>
 				</div>
 				<div class="footer__bottom">
 					<div class="footer__left">
 						<p>All rights reserved © Aqua VR 2024</p>
-						<div class="footer__logos">
-							<img src="img/footer/logo 1.webp" alt="logo">
-							<img src="img/footer/logo21.webp" alt="logo">
-						</div>
 					</div>
 					<div class="footer__right">
 						<a href="#">Privacy Policy</a>
@@ -350,8 +353,8 @@
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close">
 					<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
-						<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
+						<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#00A5FF" stroke-linecap="square" />
+						<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#00A5FF" stroke-linecap="square" />
 					</svg>
 				</button>
 				<div class="popup__text" style="position:relative;">
@@ -361,7 +364,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240921071727"></script>
+	<script src="js/app.min.js?_v=20240921170611"></script>
 </body>
 
 </html>

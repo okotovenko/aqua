@@ -4136,6 +4136,9 @@
             speed: 800,
             autoplay: true,
             loop: true,
+            autoplay: {
+                delay: 3e3
+            },
             pagination: {
                 el: ".masks-pagination",
                 clickable: true
@@ -4357,10 +4360,66 @@
             }), 500);
         }));
     }
+    function moveOnScroll() {
+        let lastScrollPosition = 0;
+        let accumulatedX = 0;
+        let accumulatedY = 0;
+        let scrollDirection = "down";
+        const stepX = 3;
+        const stepY = 1.5;
+        let isReturning = false;
+        window.addEventListener("scroll", (function() {
+            let scrollPosition = this.window.scrollY;
+            const fexplorerContainer = this.document.querySelector(".explorer");
+            const firstImg = this.document.querySelector(".explorer__diver");
+            if (fexplorerContainer.classList.contains("_watcher-view")) {
+                let delta = scrollPosition - lastScrollPosition;
+                if (delta > 0 && scrollDirection === "up") {
+                    scrollDirection = "down";
+                    isReturning = true;
+                } else if (delta < 0 && scrollDirection === "down") {
+                    scrollDirection = "up";
+                    isReturning = true;
+                }
+                if (isReturning) {
+                    firstImg.style.transform = `translate(0px, 0px) scale(${scrollDirection === "up" ? -1 : 1}, 1)`;
+                    firstImg.style.transition = `0.3s all ease`;
+                    setTimeout((() => {
+                        accumulatedX = 0;
+                        accumulatedY = 0;
+                        isReturning = false;
+                        updateMovement();
+                    }), 300);
+                } else updateMovement();
+                lastScrollPosition = scrollPosition;
+            } else {
+                firstImg.style.transform = `translate(0px, 0px) scale(1, 1)`;
+                firstImg.style.transition = `0.3s all ease`;
+                accumulatedX = 0;
+                accumulatedY = 0;
+                lastScrollPosition = scrollPosition;
+                scrollDirection = "down";
+            }
+        }));
+        function updateMovement() {
+            const firstImg = document.querySelector(".explorer__diver");
+            if (scrollDirection === "down") {
+                accumulatedX += stepX;
+                accumulatedY += stepY;
+                firstImg.style.transform = `translate(${accumulatedX}px, ${accumulatedY}px) scale(1, 1)`;
+            } else if (scrollDirection === "up") {
+                accumulatedX -= stepX;
+                accumulatedY -= stepY;
+                firstImg.style.transform = `translate(${accumulatedX}px, ${accumulatedY}px) scale(-1, 1)`;
+            }
+            firstImg.style.transition = `0.3s all ease`;
+        }
+    }
     window["FLS"] = true;
     isWebp();
     menuInit();
     pageNavigation();
     deleteTextSpanVideo();
     preloader();
+    moveOnScroll();
 })();
